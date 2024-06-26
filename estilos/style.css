@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../img/pexels-photo-1402787.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+button, input {
+    padding: .3rem .6rem;
+}
+
+button {
+    display: flex;
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+    border: 2px solid black;
+    font-size: 1rem;
+    transition: .3s;
+}
+
+button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+button:hover > i {
+    pointer-events: none;
+}
+
+#todo-container {
+    background-color: #fff;
+    width: 450px;
+    margin: 10vh auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* todo header */
+header {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+}
+
+/* todo form, todo edit */
+#todo-form, #edit-form {
+    padding: 20px 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#todo-form p, #edit-form p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-control {
+    display: flex;
+}
+
+.form-control button {
+    margin-left: 5px;
+}
+
+#cancel-edit-btn {
+    margin-top: 15px;
+}
+
+.hide {
+    display: none;
+}
+
+/* search, filter */
+#toolbar {
+    padding: 20px 10px;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+
+#search {
+    padding-right: 25px;
+    border-right: 1px solid #ccc;
+    margin-right: 25px;
+}
+#search h4,
+#filter h4 {
+    color: #333;
+}
+
+#search form {
+    display: flex;
+    margin-top: 8px;
+}
+
+#filter form {
+    margin-top: 8px;
+}
+
+#search input {
+    margin-right: 5px;
+}
+
+/* todo list */
+
+.todo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.todo h3 {
+    color: #333;
+    flex: 1;
+    font-size: .9rem;
+    word-break: break-all;
+}
+
+.todo button {
+    margin-right: 10px;
+}
+
+.done {
+    background-color: #333;
+    transition: .5s;
+}
+
+.done h3 {
+    color: #fff;
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+/* Media Query */
+
+@media(max-width: 400px) {
+    #todo-container {
+        width: 300px;
+    }
+
+    #toolbar {
+        display: block;
+    }
+
+    #toolbar #search {
+        border-right: none;
+    }
+
+    #toolbar #filter {
+        text-align: center;
+        margin-top: 15px;
+    }
+}
